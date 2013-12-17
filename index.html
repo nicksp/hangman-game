@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Demo</title>
+    <link rel="stylesheet" href="css/core.css">
+</head>
+<body>
+
+<div class="top">
+  <div class="hang-container">
+    <div class="scaffolding-top"></div>
+    <div class="scaffolding-left"></div>
+
+    <div class="draw-area">
+      <div class="rope"></div>
+    </div>
+
+    <div class="scaffolding-base"></div>
+  </div>
+  <div class="side-container">
+    <div class="container-title">Guess a Letter</div>
+    <div class="input-area">
+      <input id="letter-input" maxlength="1" />
+    </div>
+  </div>
+
+  <div class="side-container">
+    <div class="container-title">Guessed Letters</div>
+    <div id="wrong-letters" class="input-area"></div>
+  </div>
+</div><!--/ .top -->
+
+<div class="bottom">
+    <div class="word-box">
+        <div class="word-display"></div>
+    </div>
+</div><!--/ .bottom -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="js/hangman.ui.js"></script>
+<script src="js/hangman.rules.js"></script>
+<script src="js/hangman.core.js"></script>
+
+</body>
+</html>
