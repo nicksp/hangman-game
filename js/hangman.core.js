@@ -25,9 +25,16 @@ function lose() {
 }
 
 function doKeypress() {
+    var $inputLetter = $('#letter-input');
     var tempChar = $('#letter-input').val().toLowerCase();
     var tempString = '';
-    $('#letter-input').val('');
+
+    // Prevent keyup event firing
+    if (!$inputLetter.val().length) {
+        return false;
+    }
+
+    $inputLetter.val('');
 
     tempString = guessLetter(tempChar, gameShownAnswer, gameAnswer);
     if (tempString != gameShownAnswer) {
